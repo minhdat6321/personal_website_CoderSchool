@@ -1,0 +1,273 @@
+:root {
+  box-sizing: border-box;
+  /* --maxWidth: 1200px; */
+  --gutter: 2rem;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* color: #e6e8e3; */
+  color: #181a1b;
+  overflow: auto;
+}
+
+.heading-all {
+  font-size: 3rem;
+  text-align: center;
+}
+.para-all {
+  font-size: 1rem;
+}
+
+.skill-block {
+  background-color: #242424;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: aliceblue;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #181a1b;
+}
+header .right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .right-side img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px green solid;
+  margin-right: 10px;
+}
+header .right-side a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: gray;
+}
+
+header .left-side {
+  align-self: center;
+  font-size: 1.25rem;
+}
+header .left-side a {
+  text-decoration: none;
+  color: red;
+}
+/* header .left-side button {
+  border-radius: 15px;
+} */
+
+.button {
+  background-color: #4caf50; /* màu nền của nút */
+  border: none; /* không viền */
+  color: white; /* màu của biểu tượng */
+  padding: 15px 32px; /* padding xung quanh biểu tượng */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; /* con trỏ sẽ thay đổi khi di chuyển qua nút */
+  transition-duration: 0.4s; /* thời gian chuyển đổi */
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button svg {
+  fill: white;
+}
+
+.button:active svg {
+  fill: #4caf50;
+}
+
+/* hover link */
+.left-side a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+}
+
+.left-side a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: yellow;
+  transition: all 0.3s ease;
+}
+
+.left-side a:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.left-side a:hover::after {
+  width: 100%;
+  left: 0;
+  background: ;
+}
+
+/* MAIN  */
+.hello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+}
+
+.hello .img1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url(https://s.abcnews.com/images/Lifestyle/ht_pudding_the_fox_03_mt_140821_16x9_992.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(0.25) grayscale(0.75);
+  transition: all var(--transitionDuration) ease;
+  z-index: -1;
+}
+
+.hello .text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hello .text h1 {
+  color: blue;
+  margin: 0;
+}
+
+.hello .text p {
+  font-size: 1.1rem;
+  padding: 0px 100px;
+}
+
+/* ABOUT ME  */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: aqua;
+}
+.about-me-3 {
+  display: flex;
+  gap: 3vh;
+}
+.about-me-3-right,
+.about-me-3-left {
+  width: 50%;
+  text-align: left;
+}
+.tool .skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+/* PROJECTS */
+.project1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+}
+.project1-left {
+  flex: 0 0 30%;
+}
+.project1-left h2 {
+  margin: 0;
+}
+
+.project1-right {
+  flex: 0 0 70%;
+  height: 100%;
+  background-image: url("https://www.usatoday.com/gcdn/presto/2023/09/07/USAT/fdf5e1a3-4cec-472b-befe-92d7464003c2-AP_Britain_King_Charles_III.jpeg?width=660&height=441&fit=crop&format=pjpg&auto=webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project1 .flex-little {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* CONTACT  */
+
+.flex-contact {
+  /* padding-left: 3rem; */
+
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 10rem;
+  align-items: flex-start;
+}
+form,
+input,
+textarea {
+  width: 100%;
+}
+
+/* FOOTER  */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 0 8rem;
+  height: 100vh;
+}
+.myself,
+.design,
+.social {
+  flex: 0 0 33%;
+  padding: 0 0.875rem;
+}
